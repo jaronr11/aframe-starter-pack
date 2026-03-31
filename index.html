@@ -4,10 +4,24 @@
     <title>Your A-Frame Sandbox</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
   </head>
   <body>
-    <h1>A-Frame Starter Pack</h1>
-    <p>Some webVR &amp; webAR experiments in A-frame <b>by ______</b>. A-frame sandbox and all its corresponding code was created for the ATLAS Institute's Creative Technology and Design &#40;CTD&#41; Course: <i>Image</i> by Sheiva Rezvani and Jordyn Rabinowitz based on code originally shared on Glitch through <a href="https://aframe.io/aframe-school/#/" target="_blank">the A-frame School</a>. Other resources: <a href="https://aframe.io/">A-frame documentation and examples</a>. The original CTD Image course&#39;s Sandbox code repository with more instructions on <a href="https://github.com/sheiva/aframe-starter-pack">Github</a> </p>
+    <a-scene>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="white"></a-sphere>
+      <a-sphere position="0 3.2 -5" radius="1" color="white"></a-sphere>
+      <a-sphere position="0 4.8 -5" radius=".75" color="white"></a-sphere>
+      <a-sphere position=".2 5 -4.3" radius=".1" color="black"></a-sphere>
+      <a-sphere position="-.2 5 -4.3" radius=".1" color="black"></a-sphere>
+      <a-cone position="0 4.7 -4.3" rotation="90" radius-top=".1" radius-bottom=".3" color="orange"></a-cone>
+
+      <!-- the enviroment entity includes a sky. Choose from the presets"none, default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine, threetowers, poison, arches, tron, japan, dream, volcano, starry, osiris, moon" -->
+      <a-entity environment="preset: forest; dressingAmount: 500; skyType:color; skyColor:white; groundColor:white"></a-entity>
+      <a-entity camera look-controls position="0 3 0"></a-entity>
+      </a-scene>
+    <!-- <h1>A-Frame Starter Pack</h1>
+    <p>Some webVR &amp; webAR experiments in A-frame <b>by Jaron Rothbaum</b>. A-frame sandbox and all its corresponding code was created for the ATLAS Institute's Creative Technology and Design &#40;CTD&#41; Course: <i>Image</i> by Sheiva Rezvani and Jordyn Rabinowitz based on code originally shared on Glitch through <a href="https://aframe.io/aframe-school/#/" target="_blank">the A-frame School</a>. Other resources: <a href="https://aframe.io/">A-frame documentation and examples</a>. The original CTD Image course&#39;s Sandbox code repository with more instructions on <a href="https://github.com/sheiva/aframe-starter-pack">Github</a> </p>
     
     <h2>Starter Code from the A-frame School</h2>
     <ul>
@@ -24,7 +38,7 @@
       <li><a href="ImageLab10/index.html">Image Lab &#35;10</a></li>
       <li><a href="ImageLab11/index.html">Image Lab &#35;11</a></li>
       <li><a href="ImageProject-03/index.html">Project 03</a></li>
-    </ul>
+    </ul> -->
 
     
   </body>
