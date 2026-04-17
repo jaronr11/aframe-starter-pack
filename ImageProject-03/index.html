@@ -2,14 +2,25 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
-  </head>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.4.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-particle-system-component@master/dist/aframe-particle-system-component.min.js"></script>  </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
+      <a-assets>
+        <a-asset-item id="minecraft-world" src="models/high_quality_minecraft_world.glb"></a-asset-item>
+        <a-asset-item id="minecraft-steve" src="models/steve_from_a_minecraft_movie.glb"></a-asset-item>
+        <a-asset-item id="minecraft-pig" src="models/minecraft_-_pig.glb"></a-asset-item>
+        <img id="sky1" src="images/sky-sea-march-08-2024 edited.jpg"></a-asset-item>
+      </a-assets>
+
+      <a-entity gltf-model="#minecraft-world" position="0 0 -5" rotation="0 180 0" scale="5 5 5"> </a-entity>
+      <a-entity gltf-model="#minecraft-steve" position="-3.8 3.07 -4.8" scale=".07 .07 .07" rotation="0 -90 0" animation-mixer></a-entity>
+      <a-entity gltf-model="#minecraft-pig" position="-3.85 3.12 -5" scale=".005 .005 .005" rotation="0 -70" animation="property: position; from: -3.85 3.12 -5; to: -3.85 3.13 -5; dur: 350; easing: easeInQuad; dir: alternate; loop: true"></a-entity>
+      <a-entity particle-system="preset: snow; particleCount:20000"></a-entity>
+      <a-camera position="-4.15 3.15 -4.7" wasd-controls="acceleration: 1" rotation="0 -90 0"> </a-camera>
+      <a-sky src="#sky1" rotation="0 -150 0"></a-sky>
+      <a-entity light="type: hemisphere; color: #33C; groundColor: #9F9; intensity: 4"></a-entity>    
+    </a-scene>      
   </body>
+  
 </html>
